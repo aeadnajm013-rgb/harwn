@@ -27,7 +27,7 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 2px solid #2563eb;
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.35);
             width: 100%;
             max-width: 440px;
             border-radius: 28px;
@@ -74,55 +74,77 @@
             margin-bottom: 20px;
         }
 
-        /* دیزاینی نوێی لۆگۆی شین و چوارگۆشەیگۆشە بازنەیی (وەک وێنەکە) */
-        .db-logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 22px;
+        /* لۆگۆی سەرەکی هاوشێوەی وێنەکە */
+        .haroon-logo-box {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(145deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.4);
+            border: 1.5px solid #60a5fa;
             margin-bottom: 15px;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3);
-            border: 1.5px solid #60a5fa;
         }
 
-        .db-logo svg {
-            width: 65px;
-            height: 65px;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+        .haroon-logo-box svg {
+            width: 72px;
+            height: 72px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
         }
 
-        .company-title {
-            font-size: 22px;
+        /* دیزاینی ناوەکانی ژێر لۆگۆکە ڕێک وەک وێنەکە */
+        .brand-title {
+            font-size: 24px;
             color: #ffffff;
             font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
+            letter-spacing: 2px;
+            line-height: 1.1;
             font-family: 'Poppins', sans-serif;
         }
-        .company-subtitle {
+
+        .brand-divider {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
+            margin: 6px 0;
+            width: 100%;
+        }
+
+        .brand-divider::before, .brand-divider::after {
+            content: "";
+            height: 1.5px;
+            flex: 1;
+            max-width: 50px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+
+        .brand-divider span {
             color: #94a3b8;
             font-size: 13px;
             font-weight: 700;
-            letter-spacing: 2px;
-            margin-top: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
-        .company-subtitle::before, .company-subtitle::after {
-            content: "";
-            height: 1px;
-            width: 25px;
-            background: #3b82f6;
+
+        .brand-subtitle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #e2e8f0;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
         }
-        .company-subtitle span {
-            color: #60a5fa;
+
+        .brand-subtitle svg {
+            width: 14px;
+            height: 14px;
+            fill: #ffffff;
         }
 
         .account-badge {
@@ -134,7 +156,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-top: 12px;
+            margin-top: 14px;
         }
         .account-badge span {
             font-size: 13px;
@@ -441,9 +463,9 @@
             </svg>
         </a>
 
-        <!-- لۆگۆ و سەردێڕی نوێ -->
+        <!-- لۆگۆ و ناوی براندەکە ڕێک وەک وێنەکە -->
         <div class="logo-container">
-            <div class="db-logo">
+            <div class="haroon-logo-box">
                 <svg viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
                     <g transform="translate(85, 85) scale(1.4)">
                         <!-- گەڵای سێوەکە -->
@@ -453,8 +475,17 @@
                     </g>
                 </svg>
             </div>
-            <div class="company-title">HAROON</div>
-            <div class="company-subtitle"><span>Center</span> Apple ID</div>
+            
+            <div class="brand-title">HAROON</div>
+            
+            <div class="brand-divider">
+                <span>Center</span>
+            </div>
+            
+            <div class="brand-subtitle">
+                <svg viewBox="0 0 170 170"><path d="M 2,-28 C 8,-38 16,-34 14,-26 C 6,-24 0,-26 2,-28 Z" fill="#ffffff"/><path d="M -18,-20 C -26,-20 -32,-10 -32,2 C -32,18 -18,30 -10,30 C -4,30 -2,27 0,27 C 2,27 4,30 10,30 C 18,30 32,18 32,2 C 32,-2 30,-5 28,-7 C 23,-2 16,0 16,-8 C 16,-18 25,-20 25,-20 C 20,-24 10,-22 0,-18 C -6,-22 -14,-20 -18,-20 Z" fill="#ffffff"/></svg>
+                Apple ID
+            </div>
             
             <div class="account-badge">
                 <span>ئەکاونت:</span>
